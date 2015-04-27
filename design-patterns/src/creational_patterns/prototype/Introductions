@@ -1,0 +1,17 @@
+Intent: Specify the kinds of objects to create using a prototypical instance, 
+and create new objects by copying this prototype.
+用一个原型实例来创建指定对象，通过复制原型来创建新的对象
+
+Applicability: Use the Prototype pattern when a system should be independent of how its products are created, 
+composed and represented;
+当一个系统要不依赖于它怎么创建组装和实现细节
+and when the classes to instantiate are specified at run-time, for example, by dynamic loading; 
+当一个类要实时动态的实例化，动态加载
+or to avoid building a class hierarchy of factories that parallels the class hierarchy of products; 
+需要避免（略，不好翻译啊）
+or when instances of a class can have one of only a few different combinations of state.
+当一个需要实例化的class只能有几个不同的外形组合
+ It may be more convenient to install a corresponding number of prototypes and clone them 
+ rather than instantiating the class manually, each time with the appropriate state
+ 当需要创建一个新的对象消耗过大（构造函数复杂）而且需要的新对象变化不大的时候
+ 可以尝试更小的开销来创建新的对象，继承cloneable接口，通过复制一个原型来创建新的对象

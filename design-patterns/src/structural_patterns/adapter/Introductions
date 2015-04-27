@@ -1,0 +1,19 @@
+Intent: Convert the interface of a class into another interface the clients expect. 
+Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.
+通过客户端的需求改变一个类的接口
+适配器让多个继承互斥接口的类共同工作
+（将一个类的接口转换成客户希望的另外一个接口。
+Adapter模式使得原本由于接口不兼容而不能一起工作的那些类可以在一起工作。）
+Applicability: Use the Adapter pattern when
+　即Adapter模式使得原本由于接口不兼容而不能一起工作的那些类可以在一起工作。
+you want to use an existing class, and its interface does not match the one you need
+利用一个已经存在的类，但是它的接口不适配
+you want to create a reusable class that cooperates with unrelated or unforeseen classes, 
+可以创建一个可以重复使用并可以和任何其他类匹配的类
+that is, classes that don't necessarily have compatible interfaces
+这些其他的类不一定必须兼容
+you need to use several existing subclasses, but it's impractical to adapt their interface by subclassing every one. 
+An object adapter can adapt the interface of its parent class.
+一个适配器可以适配它父类接口
+
+就是把已经实现的类用新的接口包装一下

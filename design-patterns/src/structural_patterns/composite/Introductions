@@ -1,0 +1,12 @@
+Intent: Compose objects into tree structures to represent part-whole hierarchies. 
+Composite lets clients treat individual objects and compositions of objects uniformly.
+组合对象到树结构表示part-whole层次结构。
+组合使客户机能够统一地看待单个对象和对象的组合。
+Applicability: Use the Composite pattern when
+
+you want to represent part-whole hierarchies of objects
+你想代表part-whole对象的层次结构
+you want clients to be able to ignore the difference between compositions of objects and individual objects. 
+你希望客户能够忽略的对象组成,单个对象的区别。
+Clients will treat all objects in the composite structure uniformly
+客户将所有对象在复合结构一致

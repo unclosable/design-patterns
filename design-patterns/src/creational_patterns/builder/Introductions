@@ -1,0 +1,11 @@
+Intent: Separate the construction of a complex object from its representation
+so that the same construction process can create different representations.
+把复杂的构造方法从构造过程中做更高级的抽象，这样可以通过同样的方法构造不同的对象
+ 
+ Applicability: Use the Builder pattern when
+应用场景
+the algorithm for creating a complex object should be independent of the parts 
+that make up the object and how they're assembled
+一个算法由一系列复杂的不互相依赖的对象组成
+the construction process must allow different representations for the object that's constructed
+需要适应不同的表现的构造方法

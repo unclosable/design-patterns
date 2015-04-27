@@ -1,0 +1,28 @@
+Intent: Provide a unified interface to a set of interfaces in a subsystem. 
+Facade defines a higher-level interface that makes the subsystem easier to use.
+提供一些统一的接口给子系统的一系列的接口使用
+外观模式提供了更高等级的接口使子系统的接口能够够方便的使用
+
+Applicability: Use the Facade pattern when
+
+you want to provide a simple interface to a complex subsystem. 
+为一个复杂的子系统提供一个相对简单的接口
+Subsystems often get more complex as they evolve. Most patterns, when applied, result in more and smaller classes. 
+在升级的时候子系统经常会变得更加复杂。多数的设计模式在被应用的时候结果越来越多类越小
+This makes the subsystem more reusable and easier to customize, 
+这使得子系统可以更多的被复用以及更容易定制
+but is also becomes harder to use for clients that don't need to customize it. 
+但是对于客户端来说会变得越来越难用而且不需要什么定制
+A facade can provide a simple default view of the subsystem that is good enough for most clients.
+外观模式可以为大部分客户端提供一个足够好使的简单的省缺视图
+ Only clients needing more customizability will need to look beyond the facade.
+ 只有当客户端需要更多的定制的时候需要知道外观下面是什么
+there are many dependencies between clients and the implementation classes of an abstraction. 
+客户端和抽象实现之间有很多依赖关系
+Introduce a facade to decouple the subsystem from clients and other subsystems, thereby promoting subsystem independence and portability.
+在子系统和客户端之间引入外观模式来解耦从而促进子系统的独立性和可移植性
+you want to layer your subsystems. 
+当你要把子系统分层
+Use a facade to define an entry point to each subsystem level. 
+用外观模式在不同的子系统等级之间定义切入点
+If subsystems are dependent, the you can simplify the dependencies between them by making them communicate with each other solely through their facades

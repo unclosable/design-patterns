@@ -1,0 +1,20 @@
+Intent: Provide an interface for creating families of related or dependent objects without 
+specifying their concrete classes.
+定义一个接口来创建一系列相关的对象但不指定具体的实现类
+
+Applicability: Use the Abstract Factory pattern when
+适用于
+a system should be independent of how its products are created, composed and represented
+一个不需要关注它是如何实现、创建以及其具体功能的程序
+
+a system should be configured with one of multiple families of products
+一个需要多种实现的程序
+
+a family of related product objects is designed to be used together
+一系列的对象被设计用于相互调用（耦合度高）
+, and you need to enforce this constraint you want to provide a class library of products, 
+你需要强制调用相应的类的实例
+and you want to reveal just their interfaces, not their implementations
+但是你只想想使用者暴露这个程序的接口而不是内部实现
+
+2015年1月30日11:56:55 完成

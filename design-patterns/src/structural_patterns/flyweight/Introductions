@@ -1,0 +1,18 @@
+Intent: Use sharing to support large numbers of fine-grained objects efficiently.
+有效的分享大量的详细的对象
+
+Applicability: The Flyweight pattern's effectiveness depends heavily on how and where it's used.
+ Apply the Flyweight pattern when all of the following are true
+享元模式的时效性很大程度上取决于怎么使用它
+在以下条件都成立的时候在运用
+an application uses a large number of objects
+一个申请用到了大量的对象
+storage costs are high because of the sheer quantity of objects
+由于它们都是纯粹的大量对象保管成本很高
+most object state can be made extrinsic
+大部分的对象的状态是可以看到？
+many groups of objects may be replaced by relatively few shared objects once extrinsic state is removed
+几组对象如果去掉了外在的状态也许可以被一些相当的享元对象所取代
+the application doesn't depend on object identity. Since flyweight objects may be shared, 
+identity tests will return true for conceptually distinct objects.
+应用不依赖于对象的一致性。一旦享元模式被分享，鉴别测试将会对明显不同的两个对象返回true

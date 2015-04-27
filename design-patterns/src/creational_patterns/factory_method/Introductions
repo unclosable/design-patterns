@@ -1,0 +1,18 @@
+Intent: Define an interface for creating an object, but let subclasses decide which class to instantiate. 
+Factory Method lets a class defer instantiation to subclasses.
+定义一个接口来生成实例，但是由子类来决定这个实例如何实现
+工厂模式实现了通过一个类来实现多个子类
+
+Applicability: Use the Factory Method pattern when
+适用于
+a class can't anticipate the class of objects it must create
+一个类无法预期它的实例以何种方式构建
+
+a class wants its subclasses to specify the objects it creates
+一个类需要子类来定义如何实现
+
+classes delegate responsibility to one of several helper subclasses, 
+and you want to localize the knowledge of which helper subclass is the delegate
+一个类方法需要调用多个子类的实现，但是这种调用需要封装（本地化）
+
+2015年1月30日10:42:27 完成

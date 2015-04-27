@@ -1,0 +1,32 @@
+Intent: Decouple an abstraction from its implementation so that the two can vary independently.
+把抽象类从它的实现中解耦，然后他们就可以独立的愉快生活了
+Applicability: Use the Bridge pattern when
+
+you want to avoid a permanent binding between an abstraction and its implementation. 
+This might be the case, for example, when the implementation must be selected or switched at run-time.
+你想要避免把抽象类和抽象类的实现之间永久绑定
+比如实现必须在运行中被查找或者改变
+both the abstractions and their implementations should be extensible by subclassing. 
+In this case, the Bridge pattern lets you combine the different abstractions and implementations 
+and extend them independently
+抽象类和它的实现都需要可以被扩展
+桥接模式可以让你联合不同的抽象类和他们的实现并各自扩展他们
+changes in the implementation of an abstraction should have no impact on clients;
+ that is, their code should not have to be recompiled.
+ 改变一个抽象类的实现需要对客户没有影响
+ 这样代码可以不用必须重新编译
+you have a proliferation of classes. 
+Such a class hierarchy indicates the need for splitting an object into two parts. 
+Rumbaugh uses the term "nested generalizations" to refer to such class hierarchies
+你有一些会扩展的类，类的层次表明它需要分为两个部分实现，
+you want to share an implementation among multiple objects (perhaps using reference counting), 
+and this fact should be hidden from the client. A simple example is Coplien's String class, 
+in which multiple objects can share the same string representation.
+
+
+
+
+补充
+例子里的human和humanimp需要看做两个逻辑，human看做是应用humanimp的场景
+这样写的好处就是，humanImp是应用于human中的，逻辑上它们相互的对应
+而同时可以分别扩展humanImp和human，也可以3*3的相互调用（这个例子不行）
