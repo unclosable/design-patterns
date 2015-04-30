@@ -1,0 +1,28 @@
+intent:provide a surrogate or placeholder for another object to control access to it
+目的 提供一个代理或者占位符来控制对它的访问
+
+applicability : proxy is applicable whenerver there is a need for a more versatile or sophisticated reference to an object than a simple pointer.
+代理模式适用于任何需要一个灵活而负责的对象而不是一个简单的指针的地方
+ here are several common situations in which the Proxy pattern is applicable
+ 
+a remote proxy provides a local representative for an object in a different address space.
+远程代理提供了一个代表性的地方，在不同的地址空间的对象。
+a virtual proxy creates expensive objects on demand.
+虚拟代理根据需要创建昂贵的物品。（创建开支大）
+a protection proxy controls access to the original object. Protection proxies are useful when objects should have different access rights.
+保护代理控制访问原始对象。保护代理用于当对象应该有不同的访问权限。
+
+Typical Use Case:
+
+Control access to another object
+Lazy initialization
+implement logging
+facilitate network connection
+to count references to an object
+典型应用案例：
+另一个对象的访问控制
+延迟初始化
+实现日志
+方便的网络连接
+计数引用一个对象
+ 
