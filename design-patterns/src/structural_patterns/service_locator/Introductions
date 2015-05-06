@@ -1,0 +1,25 @@
+Intent: Encapsulate the processes involved in obtaining a service with a strong abstraction layer.
+压缩当获取一个service的抽象的实现的参与过程
+
+Applicability: The service locator pattern is applicable whenever we want to locate/fetch various services using JNDI which, 
+typically, is a redundant and expensive lookup.
+ The service Locator pattern addresses this expensive lookup by making use of caching techniques ie. 
+ for the very first time a particular service is requested, the service Locator looks up in JNDI,
+  fetched the relavant service and then finally caches this service object. 
+  Now, further lookups of the same service via Service Locator is done in its cache which improves the performance of application to great extent.
+
+Typical Use Case:
+
+When network hits are expensive and time consuming
+lookups of services are done quite frequently
+large number of services are being used
+
+适用范围：服务定位器模式适用于任何我们想定位/获取各种服务使用JNDI，
+通常情况下，是一个多余的和昂贵的查找。
+服务定位器模式解决这昂贵的查找利用的第一次请求一个特定的服务技术，如缓存，服务定位器查找JNDI中，
+把相关的服务，然后这个服务对象缓存。现
+在，通过服务定位器相同服务的进一步查找在其缓存以提高应用程序的性能做了很大程度上。
+典型应用案例：
+当网络访问是昂贵和费时的
+查找服务做的很频繁
+服务大量正在使用
