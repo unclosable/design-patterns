@@ -1,0 +1,17 @@
+Intent: Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request.
+ Chain the receiving objects and pass the request along the chain until an object handles it.
+ 
+ Applicability: Use Chain of Responsibility when
+
+more than one object may handle a request, and the handler isn't known a priori. The handler should be ascertained automatically
+you want to issue a request to one of several objects without specifying the receiver explicitly
+the set of objects that can handle a request should be specified dynamically
+
+目的：避免通过给多个对象有机会处理请求连接的请求，其接收的发送者。
+ 链中的接收对象和这个请求传递链，直到一个对象处理它。
+ 
+ 适用性：当责任使用链
+
+多个对象可以处理的请求，并且该处理程序是不知道先验。该处理程序应自动确定
+要发出一个请求到多个对象中的一个，而无需指定接收机显式
+对象集可以处理一个请求应被动态指定
