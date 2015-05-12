@@ -1,0 +1,59 @@
+Intent: Encapsulate a request as an object, thereby letting you parameterize clients with different requests, 
+queue or log requests, and support undoable operations.
+
+Applicability: Use the Command pattern when you want to
+
+parameterize objects by an action to perform. 
+You can express such parameterization in a procedural language with a callback function, that is, 
+a function that's registered somewhere to be called at a later point. Commands are an object-oriented replacement for callbacks.
+
+specify, queue, and execute requests at different times. 
+A Command object can have a lifetime independent of the original request. 
+If the receiver of a request can be represented in an address space-independent way,
+ then you can transfer a command object for the request to a different process and fulfill the request there
+support undo. The Command's execute operation can store state for reversing its effects in the command itself. 
+The Command interface must have an added Unexecute operation that reverses the effects of a previous call to execute.
+ Executed commands are stored in a history list. 
+ Unlimited-level undo and redo is achieved by traversing this list backwards and forwards calling unexecute and execute, respectively
+support logging changes so that they can be reapplied in case of a system crash. 
+By augmenting the Command interface with load and store operations, you can keep a persistent log of changes. 
+Recovering from a crash involves reloading logged commands from disk and re-executing them with the execute operation
+structure a system around high-level operations build on primitive operations. 
+Such a structure is common in information systems that support transactions. A transaction encapsulates a set of changes to data. 
+The Command pattern offers a way to model transactions. Commands have a common interface, letting you invoke all transactions the same way. The pattern also makes it easy to extend the system with new transactions
+Typical Use Case:
+
+to keep a history of requests
+implement callback functionality
+implement the undo functionality
+
+命令模式
+
+原意：封装请求为对象，从而让您的客户端参数的不同要求，
+排队或登录请求，并支持可撤销的操作。
+
+适用性：当你想使用Command模式
+
+通过执行某项操作参数的对象。
+您可以在过程语言的回调函数，也就是表达这样的参数，
+该公司注册某处要调用的函数在稍后一点。命令是一个面向对象的替代回调。
+
+指定，队列，并执行在不同的时间的请求。
+命令对象可以有一个独立的一生原始请求。
+如果请求的接收器可在一个地址空间无关的方式来表示，
+ 那么你可以请求传送命令对象不同的过程和实现请求有
+支持撤销。该命令的执行操作可以存储状态扭转了命令本身的影响。
+命令接口必须有一个附加Unexecute的操作，逆转先前调用的效果来执行。
+ 执行的命令被存储在历史列表。
+ 无限级撤消和重做通过遍历这个列表前后调用unexecute和执行，分别达到
+支持日志记录更改，使他们可以在系统崩溃情况下的重新应用。
+通过扩大与加载和存储操作的命令接口，你可以保持更改的持续日志。
+从崩溃中恢复包括重装记录从磁盘和命令重新执行它们与执行操作
+结构的系统围绕高层次的业务建立在基本操作。
+这样的结构是在支持事务的信息系统中常见。事务封装了一组数据更改。
+Command模式提供了一种模拟交易。命令有一个通用的接口，让您调用所有的交易一样。该模式也可以很容易地扩展系统与新的交易
+典型应用案例：
+
+保持的请求的历史
+实现回调功能
+实现撤消功能
