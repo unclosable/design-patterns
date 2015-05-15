@@ -1,0 +1,15 @@
+Intent: Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
+
+Applicability: Use the Iterator pattern
+
+to access an aggregate object's contents without exposing its internal representation
+to support multiple traversals of aggregate objects
+to provide a uniform interface for traversing different aggregate structures
+
+意图：提供一种方法来访问对象依次聚集的要素不暴露其底层表示。
+
+适用范围：使用迭代器模式
+
+访问一个聚合对象的内容而无需暴露其内部表示
+以支持聚合对象的多个遍历
+提供一个统一的界面遍历不同的聚合结构
