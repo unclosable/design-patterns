@@ -1,0 +1,20 @@
+Intent: Define an object that encapsulates how a set of objects interact. 
+Mediator promotes loose coupling by keeping objects from referring to each other explicitly,
+ and it lets you vary their interaction independently.
+ 
+ Applicability: Use the Mediator pattern when
+
+a set of objects communicate in well-defined but complex ways. The resulting interdependencies are unstructured and difficult to understand
+reusing an object is difficult because it refers to and communicates with many other objects
+a behavior that's distributed between several classes should be customizable without a lot of subclassing
+
+
+意图：定义一个对象来封装一系列的对象交互。
+中介促进由参照对方明确地保持物体的松散耦合，
+ 它可以让你改变它们的交互独立。
+ 
+ 适用范围：使用调解模式时，
+
+一组对象的沟通中明确定义，但复杂的方式。由此产生的相互依赖是非结构化的，难以理解
+重用一个目的是困难的，因为它是指和与许多其他对象进行通信
+多数民众赞成几类之间分配行为应该是定制没有很多的子类
