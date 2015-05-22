@@ -24,6 +24,9 @@ public class TestMain {
 		company.addStaff(programmer);
 		company.addStaff(tester);
 		company.addStaff(implementer);
+		System.out.println(">>>>>>>>>>>>>>>>>>>");
+		System.out.println("company construction done");
+		System.out.println("<<<<<<<<<<<<<<<<<<<");
 
 		designer.companyWork(Work.DESIGN);
 		programmer.companyWork(Work.PROGRAMME);
