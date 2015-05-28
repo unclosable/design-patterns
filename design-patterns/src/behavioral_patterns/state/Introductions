@@ -1,0 +1,23 @@
+Intent: Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.
+
+Applicability: Use the State pattern in either of the following cases
+
+an object's behavior depends on its state, and it must change its behavior at run-time depending on that state
+
+operations have large, multipart conditional statements that depend on the object's state. 
+This state is usually represented by one or more enumerated constants. 
+Often, several operations will contain this same conditional structure.
+ The State pattern puts each branch of the conditional in a separate class. 
+ This lets you treat the object's state as an object in its own right that can vary independently from other objects.
+ 
+ 意图：允许一个对象来改变它的行为时，其内部状态的变化。对象将会出现改变它的类。
+
+适用范围：使用状态模式在以下任一情况下，
+
+对象的行为取决于它的状态，并且它必须改变其行为在运行时根据该状态
+
+操作都依赖于对象的状态大，多部分条件语句。
+这种状态通常是由一个或多个列举的常量来表示。
+通常情况下，几个操作将包含此相同的条件结构。
+ State模式放条件的每个分支在一个单独的类。
+ 这可以让你把对象的状态本身就是一个对象，它可以从其他对象独立地变化。
