@@ -1,0 +1,31 @@
+Intent: Define a family of algorithms, encapsulate each one, and make them interchangeable. 
+Strategy lets the algorithm vary independently from clients that use it.
+
+Applicability: Use the Strategy pattern when
+
+many related classes differ only in their behavior. Stratefies provide a way to configure a class eith one of many behaviors
+
+you need different variants of an algorithm. for example, you migh define algorithms reflecting different space/time trade-offs. 
+Strategies can be used when these variants are implemented as a class hierarchy of algorithms
+
+an algorithm uses data that clients shouldn't know about. 
+Use the Strategy pattern to avoid exposing complex, algorithm-specific data structures
+
+a class defines many behaviors, and these appear as multiple conditional statements in its operations. 
+Instead of many conditionals, move related conditional branches into their own Strategy class
+
+意图：定义一系列的算法，封装每一个，使得它们可以互换。
+策略让自主算法有所不同使用它的客户。
+
+适用范围：使用策略模式时
+
+只有在他们的行为很多相关的类不同。 Stratefies提供了一种方式来配置一类eith许多现象之一
+
+你需要一个算法的不同变体。例如，您migh定义算法反映了不同的空间/时间权衡。
+当这些变异体被实现为算法一个类层次的策略可以用于
+
+一种算法使用的数据，客户端不应该知道的。
+使用策略模式以避免暴露复杂的，特定算法的数据结构
+
+一个类定义了许多行为，而这些出现在其运营的多个条件语句。
+相反，很多条件句，移动相关条件分支到自己的策略类
