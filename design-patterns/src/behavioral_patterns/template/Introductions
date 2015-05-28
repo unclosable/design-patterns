@@ -1,0 +1,29 @@
+Intent: Define the skeleton of an algorithm in an operation, deferring some steps to subclasses.
+ Template method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.
+ 
+ Applicability: The Template Method pattern should be used
+
+to implement the invariant parts of an algorithm once and leave it up to subclasses to implement the behavior that can vary
+
+when common behavior among subclasses should be factored and localized in a common class to avoid code duplication.
+ This is good example of "refactoring to generalize" as described by Opdyke and Johnson. 
+ You first identify the differences in the existing code and then separate the differences into new operations. 
+ Finally, you replace the differing code with a template method that calls one of these new operations
+ 
+to control subclasses extensions. 
+You can define a template method that calls "hook" operations at specific points, thereby permitting extensions only at those points
+
+意图：定义一个算法的骨架，在操作中，某些步骤推迟到子类。
+ 模板方法让子类重新定义的某些步骤，算法不改变算法的结构。
+ 
+ 适用范围：该模板方法模式，应使用
+
+要实现一个算法的不变部分一次，把它留给子类实现可改变的行为
+
+在子类中常见的行为应该被考虑和定位在一个共同的类来避免代码重复。
+ 这是“重构来概括”所描述的奥普戴克和约翰逊的好例子。
+ 你先确定在现有代码的差异，再分出分歧到新的操作。
+ 最后，你调用这些新的操作中的一个模板替换方法的不同代码
+ 
+控制子类扩展。
+您可以定义所谓的“钩子”行动的具体点，一个模板方法，因此，只有在这些点允许扩展
