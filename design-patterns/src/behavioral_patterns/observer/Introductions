@@ -1,0 +1,27 @@
+Intent: Define a one-to-many dependency between objects so that when one object changes state,
+ all its dependents are notified and updated automatically.
+ 
+ Applicability: Use the Observer pattern in any of the following situations
+
+when an abstraction has two aspects, one dependent on the other. 
+Encapsulating these aspects in separate objects lets you vary and reuse them independently
+when a change to one object requires changing others, and you don't know how many objects need to be changed
+when an object should be able to notify other objects without making assumptions about who these objects are. In other words,
+ you don't want these objects tightly coupled
+Typical Use Case:
+
+changing in one object leads to a change in other objects
+
+意图：定义对象间的一种一对多的依赖关系，当一个对象的状态发生改变，
+ 所有的家属得到通知并自动更新。
+ 
+ 适用范围：使用Observer模式在以下任何情况下，
+
+当一个抽象具有两个方面，一个依赖于其他。
+在单独的对象封装这些方面可以让你改变并独立重用他们
+当改变一个对象需要改变别人，你不知道需要多少对象被改变
+当一个对象应能不做假设谁这些对象来通知其他对象。换句话说，
+ 你不希望这些对象紧耦合
+典型应用案例：
+
+在一个对象改变导致其他对象的改变
