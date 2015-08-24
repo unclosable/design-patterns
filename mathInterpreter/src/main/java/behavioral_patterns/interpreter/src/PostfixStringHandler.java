@@ -22,11 +22,8 @@ public class PostfixStringHandler {
 				Expression rightExpression = stack.pop();
 				Expression leftExpression = stack.pop();
 				Expression re = getExpression(s, leftExpression, rightExpression);
-				System.out.println("push in :" + leftExpression + re + rightExpression + "=" + re.interpret());
-				// Expression result = new NumberExpression(re.interpret());
 				stack.push(re);
 			} else {
-				System.out.println("push in :" + s);
 				Expression e = new NumberExpression(s);
 				stack.push(e);
 			}
