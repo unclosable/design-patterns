@@ -105,11 +105,17 @@ public class CompileHandler {
 				}
 				// b类运算符，不能为计算式开头，不支持+*,+/,-*,-/，不支持*/或者/*，不支持连续三个运算符
 			} else if (PostfixUtil.isbClassOfOperators(thisStr)) {
-				// 不能为计算式开头
 				if (i == 0) {
 					firstStringEx(thisStr);
+					// 不能为计算式开头
 				} else if (!PostfixUtil.isNumber(strCacha[i - 1]) && i == 1) {
 					firstStringEx(strCacha[i - 1] + thisStr);
+					// 不支持连续三个运算符
+				} else if (i > 1 && !PostfixUtil.isNumber(strCacha[i - 2]) && !PostfixUtil.isNumber(strCacha[i - 1])) {
+					stringEx(strCacha[i - 2] + strCacha[i - 1] + thisStr);
+					// 不支持(*,(/
+				} else if (i >= 1 && PostfixUtil.getBrackets(strCacha[i - 1]) == -1) {
+					stringEx(strCacha[i - 1] + thisStr);
 					// 不支持+*,+/,-*,-/
 				} else if (PostfixUtil.isaClassOfOperators(strCacha[i - 1])) {
 					stringEx(strCacha[i - 1] + thisStr);
@@ -119,9 +125,6 @@ public class CompileHandler {
 						stringEx(strCacha[i - 1] + thisStr);
 					else
 						pretreatmentStringBuffer.append(thisStr);
-					// 不支持连续三个运算符
-				} else if (i > 1 && !PostfixUtil.isNumber(strCacha[i - 2]) && !PostfixUtil.isNumber(strCacha[i - 1])) {
-					stringEx(strCacha[i - 2] + strCacha[i - 1] + thisStr);
 				} else {
 					pretreatmentStringBuffer.append(thisStr);
 				}
