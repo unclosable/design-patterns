@@ -1,7 +1,7 @@
 package main;
 
-import reversePolishNotation.CompileHandler;
-import behavioral_patterns.interpreter.src.PostfixStringHandler;
+import interpreter.calculate.PostfixStringHandler;
+import interpreter.resolve.CompileHandler;
 
 public class MathInterpreter {
 

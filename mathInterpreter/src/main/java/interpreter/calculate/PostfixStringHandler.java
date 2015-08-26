@@ -1,13 +1,14 @@
-package behavioral_patterns.interpreter.src;
+package interpreter.calculate;
+
+import interpreter.calculate.impl.DivisionExpression;
+import interpreter.calculate.impl.EvolutionExpression;
+import interpreter.calculate.impl.MinusExpression;
+import interpreter.calculate.impl.MultiplyExpression;
+import interpreter.calculate.impl.NumberExpression;
+import interpreter.calculate.impl.PlusExpression;
+import interpreter.calculate.impl.PowerExpression;
 
 import java.util.Stack;
-
-import behavioral_patterns.interpreter.src.expressionImpl.DivisionExpression;
-import behavioral_patterns.interpreter.src.expressionImpl.MinusExpression;
-import behavioral_patterns.interpreter.src.expressionImpl.MultiplyExpression;
-import behavioral_patterns.interpreter.src.expressionImpl.NumberExpression;
-import behavioral_patterns.interpreter.src.expressionImpl.PlusExpression;
-import behavioral_patterns.interpreter.src.expressionImpl.PowerExpression;
 
 public class PostfixStringHandler {
 
@@ -43,13 +44,15 @@ public class PostfixStringHandler {
 			return new DivisionExpression(leftExpression, rightExpression);
 		case "**":
 			return new PowerExpression(leftExpression, rightExpression);
+		case "//":
+			return new EvolutionExpression(leftExpression, rightExpression);
 		default:
 			return null;
 		}
 	}
 
 	private static boolean isOperators(String s) {
-		return s.equals("-") || s.equals("+") || s.equals("*") || s.equals("/") || s.equals("**");
+		return s.equals("-") || s.equals("+") || s.equals("*") || s.equals("/") || s.equals("**") || s.equals("//");
 	}
 
 }

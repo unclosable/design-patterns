@@ -1,4 +1,4 @@
-package behavioral_patterns.interpreter.src;
+package interpreter.calculate;
 
 public abstract class Expression {
 

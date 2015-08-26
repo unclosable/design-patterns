@@ -1,6 +1,6 @@
-package behavioral_patterns.interpreter.src.expressionImpl;
+package interpreter.calculate.impl;
 
-import behavioral_patterns.interpreter.src.Expression;
+import interpreter.calculate.Expression;
 
 public class NumberExpression extends Expression {
 	private double value;
